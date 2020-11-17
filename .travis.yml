@@ -9,7 +9,17 @@ matrix:
   - language: java
     jdk: oraclejdk8
     env: BUILD=GRADLE
-
+  
+  - arch: ppc64le
+    language: java
+    jdk: oraclejdk8
+    env: BUILD=BAZEL
+    
+  - arch: ppc64le
+    language: java
+    jdk: oraclejdk8
+    env: BUILD=GRADLE
+    
 install:
   - case "$BUILD" in
       "BAZEL")
